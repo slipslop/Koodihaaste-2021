@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoilumittari</title>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <form>
+            
+            <label>
+                Valitse kulkuneuvo
+                <select name="vehicle[1]">
+                    <option value="A">Auto A</option>
+                    <option value="B">Auto B</option>
+                    <option value="C">Auto C</option>
+                </select>
+            </label>
+            <input type="text" name="distance[1]" placeholder="Matkustettava etäisyys">
+            <input type="text" name="speed[1]" placeholder="Valittu nopeus 1">
+            <input type="text" name="speed[2]" placeholder="Valittu nopeus 2">
+            <button type="submit">Laske!</button>
+    
+        </form>
+
+    </div>
+    
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="main.js"></script>
