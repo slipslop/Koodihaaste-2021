@@ -1,7 +1,7 @@
 'use strict';
 console.log('hello from index.js');
-const url = "http://localhost:3000/api/";
 
+const url = "http://localhost:3000/api/";
 
 const app = new Vue({
     el: '#form',
@@ -29,16 +29,20 @@ const app = new Vue({
   
         e.preventDefault();
 
+        let data = {    'distance' : this.distance, 
+                        'speed_1' : this.speed_1, 
+                        'speed_2' : this.speed_2 
+                };
 
-        postData(url, { a:2 })
-            .then(data => {
-                console.log(data);
-            });
+        postData(url, data)
+        .then(data => {
+            console.log(data);
+        });
       }
     }
 });
 // Example POST method implementation:
-async function postData(url = '', data = {}) {
+async function postData( url = '', data = {} ) {
     // Default options are marked with *
     const response = await fetch(url, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -54,4 +58,4 @@ async function postData(url = '', data = {}) {
       body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
     return response.json(); // parses JSON response into native JavaScript objects
-  }
+}
