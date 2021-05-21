@@ -1,0 +1,71 @@
+:root {
+    --main-bg-color: #e7fff5;
+    --main-button-color: #15EDD4;
+    --main-white-color: #fff;
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+}
+
+div.wrap {
+    max-width: 1336px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form label {
+    width: 200px;
+    margin: 10px;
+}
+
+form input, form select {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+form select:hover {
+    cursor: pointer;
+}
+
+form input {
+    border: 0;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+div.inputs-side-by-side {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    background-color: var(--main-button-color);
+    color: var(--main-white-color);
+    font-weight: 700;
+    border-radius: 5px;
+    width: 50%;
+}
+
+button:hover {
+    cursor: pointer;
+}

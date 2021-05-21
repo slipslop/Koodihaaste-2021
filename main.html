@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Autoilumittari</title>
 </head>
 <body>
@@ -14,15 +15,27 @@
             
             <label>
                 Valitse kulkuneuvo
-                <select name="vehicle[1]">
+                <select name="vehicle" required>
                     <option value="A">Auto A</option>
                     <option value="B">Auto B</option>
                     <option value="C">Auto C</option>
                 </select>
             </label>
-            <input type="text" name="distance[1]" placeholder="Matkustettava etäisyys">
-            <input type="text" name="speed[1]" placeholder="Valittu nopeus 1">
-            <input type="text" name="speed[2]" placeholder="Valittu nopeus 2">
+            <label>
+                Matkustettava etäisyys
+                <input type="number" name="distance" min="0" required>
+            </label>
+            <div class="inputs-side-by-side">
+                <label>
+                    Nopeus 1
+                    <input type="number" name="speed[1]" min="0" required>
+                </label>
+                <label>
+                    Nopeus 2
+                    <input type="number" name="speed[2]" min="0" required>
+                </label>
+            </div>
+
             <button type="submit">Laske!</button>
     
         </form>
