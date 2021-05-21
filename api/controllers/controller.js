@@ -1,7 +1,7 @@
 'use strict';
 
 exports.handlePost = function(req, res) {
-
+    console.log('hi yu!');
     let speed1 = req.body.speed1;
     let speed2 = req.body.speed2;
     let postedVehicle = req.body.vehicle;

@@ -11,7 +11,11 @@
 
     <div class="wrap">
 
-        <form>
+        <form
+            id="form"
+            @submit="checkForm"
+            method="post"
+        >
             
             <label>
                 Valitse kulkuneuvo
@@ -23,16 +27,30 @@
             </label>
             <label>
                 Matkustettava etäisyys
-                <input type="number" name="distance" min="0" required>
+                <input type="number" 
+                        name="distance" 
+                        v-model="distance" 
+                        min="0" 
+                        required
+                >
             </label>
             <div class="inputs-side-by-side">
                 <label>
                     Nopeus 1
-                    <input type="number" name="speed[1]" min="0" required>
+                    <input type="number" 
+                            name="speed_1" 
+                            v-model="speed_1"
+                            min="0" 
+                            required
+                    >
                 </label>
                 <label>
                     Nopeus 2
-                    <input type="number" name="speed[2]" min="0" required>
+                    <input type="number" 
+                            name="speed_2" 
+                            v-model="speed_2"
+                            min="0" 
+                            required>
                 </label>
             </div>
 
@@ -46,4 +64,4 @@
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-<script src="main.js"></script>
+<script src="index.js"></script>
